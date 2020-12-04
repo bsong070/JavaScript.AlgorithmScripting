@@ -1,0 +1,22 @@
+var arr = [];
+var strInput = str.split('');
+var length = str.length;
+
+for (let i=0; i<length; i++ ) {
+  if (strInput[i] === 'G') {
+    arr[i] = ["G", "C"];
+  } else if (strInput[i] === 'C') {
+    arr[i] = ["C", "G"];
+  } else if (strInput[i] === 'A') {
+    arr[i] = ["A", "T"];
+  } else if (strInput[i] === 'T') {
+    arr[i] = ["T", "A"];
+  }
+  }
+
+console.log(arr);
+
+  return arr;
+}
+
+pairElement("GCG");
