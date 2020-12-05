@@ -1,0 +1,13 @@
+function convertHTML(str) {
+  console.log(str.replace('"',"&quot;"));
+return str
+.replace(/&/g,'&amp;')
+.replace(/</g,'&lt;')
+.replace(/>/g,'&gt;')
+.replace(/"/g,"&quot;")
+.replace(/'/g,'&apos;')
+;
+}
+
+convertHTML('Stuff in "quotation marks"');
+convertHTML("Hamburgers < Pizza < Tacos");
