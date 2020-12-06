@@ -1,0 +1,7 @@
+function steamroller(arr) {
+let flattenArray = [].concat(...arr);
+return flattenArray.some(Array.isArray) ? steamroller(flattenArray) : flattenArray;
+}
+
+
+console.log(steamroller([[["a"]], [["b"]]]));
