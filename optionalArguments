@@ -1,0 +1,30 @@
+
+function addTogether() {
+
+function checkNum(num) {
+    if (typeof num !== "number") {
+        return undefined;
+    } return num;
+}
+
+var a = checkNum(arguments[0]);
+var b = checkNum(arguments[1]);
+
+if (arguments.length > 1) {
+    if (a === undefined || b === undefined) {
+        return undefined;
+    } return a+b;
+} else {
+    if (checkNum(a)) {
+        return function (arg2) {
+            if (checkNum(arg2)===undefined) {
+                return undefined;
+            } return a + arg2;
+        }
+    };
+} 
+
+}
+
+
+console.log(addTogether(2, 3));
