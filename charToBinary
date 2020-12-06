@@ -1,0 +1,6 @@
+function charToBinary(str) {
+
+
+return str.split('').map(x=> str.charCodeAt(x).toString(2)).join(' ');
+}
+console.log(charToBinary("Alice"));
