@@ -1,0 +1,24 @@
+function rot13(str) {
+
+var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ` ~!@#$%^&*()_+-={}[]|\;:",./<>?\'';
+
+var newStr = "";
+
+for (let i=0; i<str.length; i++) {
+  for (let j=0; j<letters.length; j++) {
+    if (str.charAt(i) === letters.charAt(j)) {
+      if (j < 13) {
+        newStr+=letters.charAt(j+13);
+        }else if (j >= 13 && j < 26) {
+        newStr+=letters.charAt(j-13);
+        }else if (j >= 26) {
+        newStr+=letters.charAt(j);
+        }
+    }
+  }
+} return newStr;
+
+}
+
+console.log(rot13("SERR PBQR PNZC"));
+console.log(rot13("SERR CVMMN!"));
